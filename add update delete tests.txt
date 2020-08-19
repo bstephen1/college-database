@@ -1,0 +1,111 @@
+This document shows the result of adding, updating, and finally deleting a student from the database. -a is add, -e is edit (update), -d is delete.
+
+D:\Documents\cmsc\461>python interface.py -a
+Select a table:
+0 -- course_offerings
+1 -- courses
+2 -- coursework_requirements
+3 -- degree_programs
+4 -- departments
+5 -- enrolled_courses
+6 -- faculty
+7 -- faculty_departments
+8 -- meeting_periods
+9 -- prerequisites
+10 -- programs_pursuing
+11 -- student_degrees
+12 -- students
+12
+Enter students fields:
+ID [char(7)]: 1111111
+first_name [varchar(30)]: Billy
+last_name [varchar(30)]: Brownshoe
+gender [enum('m','f')]: m
+date_of_birth [date]: 1990-9-9
+matriculation_date [date]: 2015-5-5
+hsgpa [decimal(3,2)]: 0.4
+hsgraduation [year(4)]: 2010
+hsName [varchar(50)]: Baskerville high school
+hsState [varchar(15)]: Texas
+hsZip [int(5)]: 88765
+
+Enter programs_pursuing fields:
+program_name [varchar(30)]: american history
+Changes saved.
+
+
+D:\Documents\cmsc\461>python interface.py -e
+Select a table:
+0 -- course_offerings
+1 -- courses
+2 -- coursework_requirements
+3 -- degree_programs
+4 -- departments
+5 -- enrolled_courses
+6 -- faculty
+7 -- faculty_departments
+8 -- meeting_periods
+9 -- prerequisites
+10 -- programs_pursuing
+11 -- student_degrees
+12 -- students
+12
+Select a field:
+1 -- first_name
+2 -- last_name
+3 -- gender
+4 -- date_of_birth
+5 -- matriculation_date
+6 -- hsgpa
+7 -- hsgraduation
+8 -- hsName
+9 -- hsState
+10 -- hsZip
+2
+Enter primary key of row to update:
+ID [char(7)]: 1111111
+New value for last_name [varchar(30)]: Blueshoe
+Changes saved.
+
+
+D:\Documents\cmsc\461>python interface.py -d
+Select a table:
+0 -- course_offerings
+1 -- courses
+2 -- coursework_requirements
+3 -- degree_programs
+4 -- departments
+5 -- enrolled_courses
+6 -- faculty
+7 -- faculty_departments
+8 -- meeting_periods
+9 -- prerequisites
+10 -- programs_pursuing
+11 -- student_degrees
+12 -- students
+10
+Enter primary key of row to delete:
+student_ID [char(7)]: 1111111
+program_name [varchar(30)]: american history
+Changes saved.
+
+
+D:\Documents\cmsc\461>python interface.py -d
+Select a table:
+0 -- course_offerings
+1 -- courses
+2 -- coursework_requirements
+3 -- degree_programs
+4 -- departments
+5 -- enrolled_courses
+6 -- faculty
+7 -- faculty_departments
+8 -- meeting_periods
+9 -- prerequisites
+10 -- programs_pursuing
+11 -- student_degrees
+12 -- students
+12
+Enter primary key of row to delete:
+ID [char(7)]: 1111111
+Changes saved.

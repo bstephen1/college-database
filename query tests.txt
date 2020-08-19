@@ -1,0 +1,148 @@
+This document shows the results of testing the 10 queries. The queries are labelled in the
+order that they appear on the requirements sheet. Individual queries can be easily found by
+searching for "qX", where X is the number of the query.
+
+
+D:\Documents\cmsc\461>python interface.py -q1
+
+Faculty:
+('00003', 'Ed', 'Bloomensfeld', 'edblooom@gmail.com', '4105551013', 'assistant professor', 'full-time', 'tenure-track', 'phd', 'art', '00003', 'art')
+('00001', 'Casandra', 'Robertson', 'casrob@gmail.com', '4105551011', 'instructor', 'part-time', 'non-tenure-track', 'bachelor', 'art', '00001', 'art')
+('00000', 'Jeff', 'Smithee', 'jsmithee@gmail.com', '4105551010', 'professor', 'full-time', 'tenure-track', 'phd', 'computer science', '00000', 'computer science')
+('00001', 'Casandra', 'Robertson', 'casrob@gmail.com', '4105551011', 'instructor', 'part-time', 'non-tenure-track', 'bachelor', 'art', '00001', 'computer science')
+('00002', 'Veronica', 'Monica', 'veronimon@gmail.com', '4105551012', 'lecturer', 'full-time', 'adjunct', 'master', 'european history', '00002', 'history')
+('00004', 'Jeff', 'Smithee', 'jsmithee@gmail.com', '4105551014', 'associate professor', 'full-time', 'tenure-track', 'phd', 'history', '00004', 'history')
+('00001', 'Casandra', 'Robertson', 'casrob@gmail.com', '4105551011', 'instructor', 'part-time', 'non-tenure-track', 'bachelor', 'art', '00001', 'history')
+
+
+D:\Documents\cmsc\461>python interface.py -q2
+Enter a department: history
+Faculty in history: 3
+Courses in history: 1
+
+
+D:\Documents\cmsc\461>python interface.py -q3
+Enter a department: history
+Enter a semester: fall
+Enter a year: 2016
+Number of courses in history during fall 2016: 3
+
+
+D:\Documents\cmsc\461>python interface.py -q4
+Enter the course acronym: cmsc
+Enter the course num: 100
+Enter the section num: 1
+Enter a semester: fall
+Enter a year: 2016
+
+Students enrolled:
+
+
+D:\Documents\cmsc\461>python interface.py -q4
+Enter the course acronym: cmsc
+Enter the course num: 101
+Enter the section num: 1
+Enter a semester: fall
+Enter a year: 2016
+
+Students enrolled:
+('Billy', 'Tables')
+
+
+D:\Documents\cmsc\461>python interface.py -q5
+Enter a semester: fall
+Enter a year: 2016
+
+Students X Credits for each major:
+american history: 0
+art studies: 6
+computer science: 6
+european history: 3
+
+
+D:\Documents\cmsc\461>python interface.py -q6
+Enter a semester: fall
+Enter a year: 2016
+
+Students X Credits for each department:
+art:
+        art studies: 6
+
+computer science:
+        computer science: 6
+
+history:
+        american history: 0
+        european history: 3
+
+				
+D:\Documents\cmsc\461>python interface.py -q7
+Enter a degree program: computer science
+Enter a semester: fall
+Enter a year: 2015
+Student   GPA
+0000002   4.0
+0000001   3.0
+0000000   1.0
+
+
+D:\Documents\cmsc\461>python interface.py -q8
+Enter the course acronym: cmsc
+Enter the course num: 101
+Enter the section num: 1
+Enter a semester: fall
+Enter a year: 2016
+Students who have met all prereqs:
+0000000
+
+
+D:\Documents\cmsc\461>python interface.py -q8
+Enter the course acronym: cmsc
+Enter the course num: 201
+Enter the section num: 5
+Enter a semester: fall
+Enter a year: 2015
+Students who have met all prereqs:
+0000002
+
+
+D:\Documents\cmsc\461>python interface.py -q10
+Enter the name of a degree program: computer science
+Enter the starting year: 2016
+Enter the ending year: 2016
+cmsc 100:
+        min: 4
+        max: 4
+        avg: 4.0
+        dev: 0.0
+cmsc 101:
+        min: 0
+        max: 0
+        avg: 0
+        dev: 0
+cmsc 201:
+        min: 0
+        max: 0
+        avg: 0
+        dev: 0
+
+				
+D:\Documents\cmsc\461>python interface.py -q10
+Enter the name of a degree program: computer science
+Enter the starting year: 2015
+Enter the ending year: 2016
+cmsc 100:
+        min: 1
+        max: 4
+        avg: 3.0
+        dev: 1.22474487139
+cmsc 101:
+        min: 4
+        max: 4
+        avg: 4.0
+        dev: 0.0
+cmsc 201:
+        min: 4
+        max: 4
+        avg: 4.0
+        dev: 0.0
